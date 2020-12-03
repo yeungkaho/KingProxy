@@ -51,7 +51,7 @@ class Rule {
 }
 
 public class ACL {
-    public static var shared = ACL()
+    public private(set) static var shared: ACL!
     public let useDNS = true // whether use module dns
     
     private var db: MMDB
@@ -60,14 +60,13 @@ public class ACL {
     
     public var isEmpty: Bool { return rules.count == 0 }
     
-    public init?() {
+    public static func initialize(dbPath: String) {
+        shared = ACL(dbPath: dbPath)
+    }
+    
+    init?(dbPath: String) {
         
-        guard let path = Bundle(for: ACL.self).path(forResource: "GeoLite2-Country", ofType: "mmdb") else {
-            DDLogError("Can't find mmdb database")
-            return nil
-        }
-        
-        guard let db = MMDB(path) else {
+        guard let db = MMDB(dbPath) else {
             DDLogError("Init mmdb failed")
             return nil
         }
