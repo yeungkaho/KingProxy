@@ -8,7 +8,7 @@
 
 import Foundation
 import CocoaAsyncSocket
-import CocoaLumberjackSwift
+import CocoaLumberjack
 
 extension Error {
     var code: Int { return (self as NSError).code }

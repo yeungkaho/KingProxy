@@ -8,7 +8,7 @@
 
 import Foundation
 import CocoaAsyncSocket
-import CocoaLumberjackSwift
+import CocoaLumberjack
 
 public final class DNSServer: NSObject {
     public static var `default` = DNSServer()

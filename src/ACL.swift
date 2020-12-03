@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import MMDB
-import CocoaLumberjackSwift
+import MMDB_Swift
+import CocoaLumberjack
 
 enum RuleType: String {
     case domain = "DOMAIN"

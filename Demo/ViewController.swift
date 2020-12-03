@@ -8,7 +8,7 @@
 
 import UIKit
 import KingProxy
-import CocoaLumberjackSwift
+import CocoaLumberjack
 
 func delay(_ interval: TimeInterval, task: @escaping ()->()) {
     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + interval) {

@@ -8,7 +8,7 @@
 
 import Cocoa
 import KingProxy
-import CocoaLumberjackSwift
+import CocoaLumberjack
 import CocoaAsyncSocket
 
 class ViewController: NSViewController {

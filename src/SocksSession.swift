@@ -8,7 +8,7 @@
 
 import Foundation
 import CocoaAsyncSocket
-import CocoaLumberjackSwift
+import CocoaLumberjack
 
 // https://www.ietf.org/rfc/rfc1928.txt
 

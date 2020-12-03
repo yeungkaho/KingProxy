@@ -8,7 +8,7 @@
 
 import Foundation
 import CocoaAsyncSocket
-import CocoaLumberjackSwift
+import CocoaLumberjack
 
 public enum ProxyType: String {
     case http = "Http"

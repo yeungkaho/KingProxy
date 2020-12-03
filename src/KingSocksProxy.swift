@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import CocoaLumberjackSwift
+import CocoaLumberjack
 import CocoaAsyncSocket
 
 public class KingSocksProxy: NSObject {
