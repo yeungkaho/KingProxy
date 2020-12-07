@@ -39,11 +39,11 @@ public class KingHttpProxy: NSObject {
     private var sessions = Set<HttpSession>()
     private var listenSocket: GCDAsyncSocket!
     
-    private var syncQueue = DispatchQueue(label: "com.purkylin.kingproxy.sync.http")
+    private var syncQueue = DispatchQueue(label: "com.purkylin.kingproxy.sync.http", autoreleaseFrequency: .workItem)
     
     public override init() {
         super.init()
-        let queue = DispatchQueue(label: "com.purkylin.kingproxy.http", qos: .default, attributes: .concurrent)
+        let queue = DispatchQueue(label: "com.purkylin.kingproxy.http", qos: .default, attributes: .concurrent, autoreleaseFrequency: .workItem)
         listenSocket = GCDAsyncSocket(delegate: self, delegateQueue: queue)
     }
     

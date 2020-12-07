@@ -65,10 +65,6 @@
 		0DEA39512021B06D00B93F0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DEA39502021B06D00B93F0A /* Assets.xcassets */; };
 		0DEA39542021B06D00B93F0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEA39522021B06D00B93F0A /* Main.storyboard */; };
 		0DEA395A2021B15F00B93F0A /* KingProxy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DEA392D202068DD00B93F0A /* KingProxy.framework */; };
-		0DEA396D2022B69300B93F0A /* KingSocksProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA396C2022B69300B93F0A /* KingSocksProxy.swift */; };
-		0DEA396E2022B69300B93F0A /* KingSocksProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA396C2022B69300B93F0A /* KingSocksProxy.swift */; };
-		0DEA39702022B86400B93F0A /* SocksSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA396F2022B86400B93F0A /* SocksSession.swift */; };
-		0DEA39712022B86400B93F0A /* SocksSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEA396F2022B86400B93F0A /* SocksSession.swift */; };
 		3155BD80248E370A008C44C0 /* GeoLite2-Country.mmdb in Resources */ = {isa = PBXBuildFile; fileRef = 31722E80248E35F40009E70A /* GeoLite2-Country.mmdb */; };
 		31722E81248E37DC0009E70A /* GeoLite2-Country.mmdb in Resources */ = {isa = PBXBuildFile; fileRef = 31722E80248E35F40009E70A /* GeoLite2-Country.mmdb */; };
 		55273A71E2AA9780AA584214 /* Pods_Demo_for_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEDC20FD48BCC83DA4621A4A /* Pods_Demo_for_macOS.framework */; };
@@ -171,8 +167,6 @@
 		0DEA39532021B06D00B93F0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DEA39552021B06D00B93F0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DEA39562021B06D00B93F0A /* Demo_for_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo_for_macOS.entitlements; sourceTree = "<group>"; };
-		0DEA396C2022B69300B93F0A /* KingSocksProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingSocksProxy.swift; sourceTree = "<group>"; };
-		0DEA396F2022B86400B93F0A /* SocksSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocksSession.swift; sourceTree = "<group>"; };
 		1E02559C7F6674A5FC6CB8A6 /* Pods-KingProxy-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KingProxy-macOS.release.xcconfig"; path = "Target Support Files/Pods-KingProxy-macOS/Pods-KingProxy-macOS.release.xcconfig"; sourceTree = "<group>"; };
 		27F54E66972A1250B4AEFC4E /* Pods_KingProxy_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KingProxy_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		31722E80248E35F40009E70A /* GeoLite2-Country.mmdb */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GeoLite2-Country.mmdb"; sourceTree = "<group>"; };
@@ -309,9 +303,7 @@
 				0DEA38B120201F6F00B93F0A /* Surge.conf */,
 				0DEA38B220201F6F00B93F0A /* HttpHeader.swift */,
 				0DEA38B320201F6F00B93F0A /* KingHttpProxy.swift */,
-				0DEA396C2022B69300B93F0A /* KingSocksProxy.swift */,
 				0DEA38B520201F6F00B93F0A /* HttpSession.swift */,
-				0DEA396F2022B86400B93F0A /* SocksSession.swift */,
 				0DEA38C82020209600B93F0A /* Util.swift */,
 				31722E80248E35F40009E70A /* GeoLite2-Country.mmdb */,
 			);
@@ -774,14 +766,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DEA38BD20201F6F00B93F0A /* HttpSession.swift in Sources */,
-				0DEA39702022B86400B93F0A /* SocksSession.swift in Sources */,
 				0DEA38C92020209700B93F0A /* Util.swift in Sources */,
 				0D2E50C8204C35C000BBFBC3 /* Types.swift in Sources */,
 				0D2E50C5204C35C000BBFBC3 /* IP.swift in Sources */,
 				0D2E50C6204C35C000BBFBC3 /* Integer+Data.swift in Sources */,
 				0D2E50BC204C35AC00BBFBC3 /* DNSResolver.swift in Sources */,
 				0D2E50BD204C35AC00BBFBC3 /* DNSServer.swift in Sources */,
-				0DEA396D2022B69300B93F0A /* KingSocksProxy.swift in Sources */,
 				0D2E50C9204C35C000BBFBC3 /* Data+Extensions.swift in Sources */,
 				0DEA38BB20201F6F00B93F0A /* KingHttpProxy.swift in Sources */,
 				0D2E50C4204C35C000BBFBC3 /* Message.swift in Sources */,
@@ -805,14 +795,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DEA39372020695B00B93F0A /* HttpHeader.swift in Sources */,
-				0DEA39712022B86400B93F0A /* SocksSession.swift in Sources */,
 				0DEA393B2020695B00B93F0A /* Util.swift in Sources */,
 				0D2E50C2204C35BF00BBFBC3 /* Types.swift in Sources */,
 				0D2E50BF204C35BF00BBFBC3 /* IP.swift in Sources */,
 				0D2E50C0204C35BF00BBFBC3 /* Integer+Data.swift in Sources */,
 				0D2E50BA204C35AC00BBFBC3 /* DNSResolver.swift in Sources */,
 				0D2E50BB204C35AC00BBFBC3 /* DNSServer.swift in Sources */,
-				0DEA396E2022B69300B93F0A /* KingSocksProxy.swift in Sources */,
 				0D2E50C3204C35BF00BBFBC3 /* Data+Extensions.swift in Sources */,
 				0DEA39382020695B00B93F0A /* KingHttpProxy.swift in Sources */,
 				0D2E50BE204C35BF00BBFBC3 /* Message.swift in Sources */,

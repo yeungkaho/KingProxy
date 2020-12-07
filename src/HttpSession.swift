@@ -52,6 +52,8 @@ public class HttpSession: NSObject {
     private var receviedData: Data?
     private var header: HttpHeader!
     
+    private static let httpSessionQueue = DispatchQueue(label: "HttpSession.Queue", qos: .userInteractive, attributes: .concurrent, autoreleaseFrequency: .workItem)
+    
     var time: CFTimeInterval = CFAbsoluteTimeGetCurrent()
     
     internal weak var delegate: HttpSessionDelegate?
@@ -75,9 +77,8 @@ public class HttpSession: NSObject {
         }
         
         proxySocket.delegate = self
-        let queue = DispatchQueue.global()
 //        let queue = DispatchQueue(label: "com.purkylin.kingproxy.httpsession.sock")
-        forwardSocket = GCDAsyncSocket(delegate: self, delegateQueue: queue)
+        forwardSocket = GCDAsyncSocket(delegate: self, delegateQueue: Self.httpSessionQueue)
         proxySocket.readData(to: termData, withTimeout: readTimeout, tag: Tag.initial.rawValue)
     }
     
